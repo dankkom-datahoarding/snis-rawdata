@@ -22,3 +22,6 @@ About SNIS - Série Histórica
 >
 > As consultas podem ser realizadas segundo diferentes critérios de entrada, tais como Ano de referência, Tipo de serviço, Abrangência, Natureza jurídica, Informação ou Indicador, Região Geográfica, Estado ou Município e, ainda, segundo o nome do prestador de serviços. Em todas as situações de agrupamento são fornecidas as totalizações para as informações, enquanto que no caso dos indicadores são fornecidas as médias ponderadas cujos cálculos seguem os critérios do SNIS.
 
+Licença:
+
+This SNIS-DATA is made available under the Open Database License: http://opendatacommons.org/licenses/odbl/1.0/. Any rights in individual contents of the database are licensed under the Database Contents License: http://opendatacommons.org/licenses/dbcl/1.0/
