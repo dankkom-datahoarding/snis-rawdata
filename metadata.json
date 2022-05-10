@@ -1,0 +1,194 @@
+{
+    "datasets": {
+        "agua-esgoto": {
+            "agregado": {
+                "name": "Informações e indicadores agregados",
+                "id_cols": [
+                    "ano_referencia",
+                    "codigo_municipio",
+                    "nome_municipio",
+                    "sigla_uf",
+                    "codigo_prestador",
+                    "nome_prestador",
+                    "sigla_prestador",
+                    "tipo_servico",
+                    "abrangencia",
+                    "natureza_juridica"
+                ]
+            },
+            "agrupamento-agregado": {
+                "name": "Agrupamento dinâmico de indicadores e informações agregadas por ano de referência",
+                "id_cols": [
+                    "ano_referencia",
+                    "codigo_municipio",
+                    "nome_municipio",
+                    "sigla_uf",
+                    "nome_regiao",
+                    "codigo_prestador",
+                    "nome_prestador",
+                    "sigla_prestador",
+                    "tipo_servico",
+                    "abrangencia",
+                    "natureza_juridica"
+                ]
+            },
+            "agrupamento-desagregado": {
+                "name": "Agrupamento dinâmico de indicadores e informações desagregadas por ano de referência",
+                "id_cols": [
+                    "ano_referencia",
+                    "codigo_municipio",
+                    "nome_municipio",
+                    "sigla_uf",
+                    "nome_regiao",
+                    "codigo_prestador",
+                    "nome_prestador",
+                    "sigla_prestador",
+                    "tipo_servico",
+                    "abrangencia",
+                    "natureza_juridica"
+                ]
+            },
+            "delegacao-atendimento-mun": {
+                "name": "Delegação e tipo de serviço dos municípios com prestadores regionais e microrregionais",
+                "id_cols": [
+                    "ano_referencia",
+                    "codigo_municipio",
+                    "nome_municipio",
+                    "sigla_uf",
+                    "codigo_prestador",
+                    "sigla_prestador",
+                    "abrangencia"
+                ]
+            },
+            "desagregado": {
+                "name": "Informações e indicadores desagregados",
+                "id_cols": [
+                    "ano_referencia",
+                    "codigo_municipio",
+                    "nome_municipio",
+                    "sigla_uf",
+                    "codigo_prestador",
+                    "nome_prestador",
+                    "sigla_prestador",
+                    "tipo_servico",
+                    "abrangencia",
+                    "natureza_juridica"
+                ]
+            },
+            "pesquisa-simplificada": {
+                "name": "Prestadores que responderam pesquisas simplificadas",
+                "id_cols": [
+                    "ano_referencia",
+                    "codigo_municipio",
+                    "nome_municipio",
+                    "sigla_uf",
+                    "codigo_prestador",
+                    "nome_prestador",
+                    "sigla_prestador",
+                    "tipo_servico",
+                    "abrangencia",
+                    "natureza_juridica"
+                ]
+            }
+        },
+        "municipios": {
+            "agrupamento-municipio": {
+                "name": "Agrupamento dinâmico de indicadores e informações por ano de referência",
+                "id_cols": [
+                    "ano_referencia",
+                    "codigo_municipio",
+                    "nome_municipio",
+                    "sigla_uf",
+                    "nome_regiao",
+                    "nome_prestador",
+                    "tipo_servico",
+                    "natureza_juridica"
+                ]
+            },
+            "consolidado-municipio": {
+                "name": "Informações e indicadores municipais consolidados",
+                "id_cols": [
+                    "ano_referencia",
+                    "codigo_municipio",
+                    "nome_municipio",
+                    "sigla_uf",
+                    "nome_prestador",
+                    "tipo_servico",
+                    "natureza_juridica"
+                ]
+            }
+        },
+        "residuos-solidos": {
+            "agrupamento-rs": {
+                "name": "Agrupamento dinâmico de indicadores e informações por ano de referência",
+                "id_cols": [
+                    "ano_referencia",
+                    "codigo_municipio",
+                    "nome_municipio",
+                    "nome_regiao_metropolitana",
+                    "sigla_uf",
+                    "nome_regiao",
+                    "codigo_prestador",
+                    "nome_prestador",
+                    "sigla_prestador",
+                    "natureza_juridica"
+                ]
+            },
+            "fluxo-residuos": {
+                "name": "Fluxo e quantidade de resíduos",
+                "id_cols": [
+                    "ano_referencia",
+                    "codigo_municipio",
+                    "nome_municipio",
+                    "sigla_uf",
+                    "codigo_unidade",
+                    "nome_unidade"
+                ]
+            },
+            "orgao-gestor-mun": {
+                "name": "Órgãos gestores municipais",
+                "id_cols": [
+                    "ano_referencia",
+                    "codigo_municipio",
+                    "nome_municipio",
+                    "sigla_uf",
+                    "codigo_prestador",
+                    "nome_prestador",
+                    "sigla_prestador",
+                    "natureza_juridica"
+                ]
+            },
+            "unidades-processamento": {
+                "name": "Unidades de processamento",
+                "id_cols": [
+                    "ano_referencia",
+                    "codigo_municipio",
+                    "nome_municipio",
+                    "sigla_uf",
+                    "codigo_unidade",
+                    "nome_unidade",
+                    "tipo_unidade",
+                    "operador"
+                ]
+            }
+        }
+    },
+    "id_cols": [
+        "ano_referencia",
+        "codigo_municipio",
+        "nome_municipio",
+        "nome_regiao_metropolitana",
+        "sigla_uf",
+        "nome_regiao",
+        "codigo_prestador",
+        "nome_prestador",
+        "sigla_prestador",
+        "abrangencia",
+        "tipo_servico",
+        "natureza_juridica",
+        "codigo_unidade",
+        "nome_unidade",
+        "tipo_unidade",
+        "operador"
+    ]
+}
