@@ -59,11 +59,11 @@ def read_lines(filepath, rename_columns=True) -> dict[str, str]:
 
 
 def clean_rows(data, skip_aggregation_rows=True, drop_ibge_column=True):
-    AGGREGATION_ROW_START = "TOTAL da AMOSTRA:"
+    AGGREGATION_ROW_START = ("TOTAL da AMOSTRA", "---")
     IBGE_COLUMN = "Código do IBGE"
     for row in data:
         if skip_aggregation_rows \
-           and AGGREGATION_ROW_START in row["codigo_municipio"]:
+           and any(c in list(row.values())[0] for c in AGGREGATION_ROW_START):
             continue
         if drop_ibge_column and IBGE_COLUMN in row:
             row.pop(IBGE_COLUMN)
