@@ -315,3 +315,55 @@ Subgroups and it's families of indicators & informations:
 > Por fim, essa é a busca que permite agrupar dinamicamente os dados para cada ano de referência. Em todas as situações de agrupamento é fornecida a totalização e, no caso dos indicadores, o resultado de cálculo do indicador médio. Permite filtrar por, além do Ano de referência, Natureza jurídica, Região, Estado, Região metropolitana, Prestador de serviço e famílias de informações e indicadores.
 
 ---
+
+### Águas Pluviais
+
+Dataset name: aguas-pluviais
+
+Subgroups and it's families of indicators & informations:
+
+- informacoes
+  - Geral
+  - Cobrança
+  - Financeiro
+  - Infraestrutura
+  - Operacional
+  - Gestão de Riscos
+- indicadores
+  - Geral
+  - Financeiro
+  - Infraestrutura
+  - Gestão de Riscos
+
+> O componente **"Drenagem e Manejo das Águas Pluviais"** possui informações e indicadores das prefeituras e órgãos municipais que responderam ao SNIS nos respectivos anos de referência, coletados desde 2015. No SNIS – Série Histórica, os dados são disponibilizados de forma dinâmica e podem ser agrupados segundo a unidade da federação, as regiões metropolitanas e as macrorregiões do país, dentre outros tipos de agrupamentos, ou ainda pontualmente por municípios.
+>
+> São exemplos de informações e indicadores:
+>
+> - Bacias hidrográficas;
+> - Cobrança pelos serviços;
+> - Receitas e despesas;
+> - Investimentos e desembolsos realizados;
+> - Existência de Plano Diretor;
+> - Tipos de Sistema de Drenagem;
+> - Extensão de vias com pavimentação e meio-fio;
+> - Quantidade de bocas de lobo no município;
+> - Mapeamento de área de risco de inundação;
+> - Pessoas afetadas por eventos hidroógicos impactantes (alagamento, enxurradas e inundações);
+> - Índice de cobertura de vias públicas com redes ou canais pluviais subterrâneos na área urbana;
+> - Índice de Despesa Média Praticada para os Serviços de Drenagem e Manejo de Águas Pluviais Urbanas;
+> - Índice de Investimento per capita em drenagem e Manejo de Águas Pluviais Urbanas;
+> - Índice de Parcela de Domicílios em Situação de Risco de Inundação.
+
+---
+
+> O SNIS Águas Pluviais possui as seguintes famílias de informações: Gerais, Cobrança, Financeiro, Infraestrutura, Operacional e Gestão de Risco. Além disso, a partir dessas informações são calculados e disponibilizados os indicadores que compõem as seguintes famílias: Gerais, Administrativos e financeiros, Infraestrutura e Gestão de Riscos.
+>
+> A pesquisa de dados de Águas Pluviais do SNIS pode ser feita a partir de 2 lógicas distintas: por Indicadores municipais ou por Informações municipais por ano de referência.
+>
+> #### Informações municipais
+>
+> Nessa busca a base do dado é o próprio órgão gestor municipal, que é o responsável pelo serviço de drenagem e manejo das águas pluviais urbanas. Permite filtrar por Ano de referência, Região, Estado, Município e Família de informações.
+>
+> #### Indicadores municipais
+>
+> Essa é a busca que permite visualizar os indicadores calculados dos municípios para cada ano de referência. Permite filtrar, além do Ano de referência, também por Região, Estado, Faixa Populacional, Municípios e Família de informações.
