@@ -171,6 +171,62 @@
                     "operador"
                 ]
             }
+        },
+        "aguas-pluviais": {
+            "informacoes": {
+                "name": "Informações municipais",
+                "id_cols": [
+                    "ano_referencia",
+                    "codigo_municipio_snis",
+                    "codigo_municipio",
+                    "nome_municipio",
+                    "sigla_uf",
+                    "codigo_uf",
+                    "nome_uf",
+                    "codigo_regiao",
+                    "nome_regiao",
+                    "codigo_microrregiao",
+                    "nome_microrregiao",
+                    "codigo_mesorregiao",
+                    "municipio_populacao",
+                    "municipio_populacao_urbana",
+                    "municipio_faixa_populacional",
+                    "municipio_faixa_populacional_descricao",
+                    "municipio_capital_uf",
+                    "municipio_latitude",
+                    "municipio_longitude",
+                    "municipio_area_km2",
+                    "setor_responsavel",
+                    "natureza_juridica"
+                ]
+            },
+            "indicadores": {
+                "name": "Indicadores municipais",
+                "id_cols": [
+                    "ano_referencia",
+                    "codigo_municipio_snis",
+                    "codigo_municipio",
+                    "nome_municipio",
+                    "sigla_uf",
+                    "codigo_uf",
+                    "nome_uf",
+                    "codigo_regiao",
+                    "nome_regiao",
+                    "codigo_microrregiao",
+                    "nome_microrregiao",
+                    "codigo_mesorregiao",
+                    "municipio_populacao",
+                    "municipio_populacao_urbana",
+                    "municipio_faixa_populacional",
+                    "municipio_faixa_populacional_descricao",
+                    "municipio_capital_uf",
+                    "municipio_latitude",
+                    "municipio_longitude",
+                    "municipio_area_km2",
+                    "setor_responsavel",
+                    "natureza_juridica"
+                ]
+            }
         }
     },
     "id_cols": [
