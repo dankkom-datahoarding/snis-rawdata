@@ -9,16 +9,18 @@ def main():
     releasedir = Path("release")
     for dataset_name in metadata["datasets"]:
         for datasubset_name in metadata["datasets"][dataset_name]:
-            datasubset_path = releasedir / dataset_name / datasubset_name
-            filename = f"{dataset_name}-{datasubset_name}.7z"
+            datasubset_filepath = (
+                releasedir / dataset_name / f"{datasubset_name}.csv"
+            )
+            filename = f"{dataset_name}-{datasubset_name}.zip"
             cmd = [
-                "7z",
-                "a",
+                "zip",
+                "-9jpr",
                 filename,
-                f".\\{datasubset_path / '*'}",
+                str(datasubset_filepath),
             ]
-            print(" ".join(cmd))
-            subprocess.run(" ".join(cmd))
+            print(cmd)
+            subprocess.run(cmd)
 
 
 if __name__ == "__main__":
