@@ -6,10 +6,10 @@ from pathlib import Path
 def main():
     with open("metadata.json") as f:
         metadata = json.load(f)
-    data_raw_dir = Path(".", "data-raw")
+    releasedir = Path("release")
     for dataset_name in metadata["datasets"]:
         for datasubset_name in metadata["datasets"][dataset_name]:
-            datasubset_path = data_raw_dir / dataset_name / datasubset_name
+            datasubset_path = releasedir / dataset_name / datasubset_name
             filename = f"{dataset_name}-{datasubset_name}.7z"
             cmd = [
                 "7z",

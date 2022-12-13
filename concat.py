@@ -126,13 +126,13 @@ def main():
     with open("metadata.json", encoding="utf-8") as f:
         metadata = json.load(f)
 
-    datarawdir = Path("data-raw")
-    datadir = Path("data")
+    rawdir = Path(".")
+    releasedir = Path("release")
 
     for group in metadata["datasets"]:
         for subgroup in metadata["datasets"][group]:
             print(group, subgroup)
-            dirpath = datarawdir / group / subgroup
+            dirpath = rawdir / group / subgroup
             if group == "aguas-pluviais":
                 columns_renamer = rename_columns_aguas_pluviais
             else:
@@ -143,7 +143,7 @@ def main():
                     for f in dirpath.glob("*.csv")
                 )
             )
-            destfilepath = datadir / group / f"{subgroup}.csv"
+            destfilepath = releasedir / group / f"{subgroup}.csv"
             write(data, destfilepath)
 
 
