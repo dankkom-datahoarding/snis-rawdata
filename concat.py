@@ -4,6 +4,9 @@ from itertools import chain
 from pathlib import Path
 from typing import Callable
 
+AGGREGATION_ROW_START = ("TOTAL da AMOSTRA", "---")
+IBGE_COLUMN = "Código do IBGE"
+
 
 def rename_columns_aguas_pluviais(name: str) -> str:
     """This function renames the identifier columns of the raw CSV files to
@@ -91,9 +94,25 @@ def read_lines(filepath, columns_renamer: Callable) -> dict[str, str]:
                 }
 
 
+def read_directory(dirpath: Path, columns_renamer: Callable):
+    readers = []
+    for f in dirpath.glob("*.csv"):
+        reader = read_lines(f, columns_renamer)
+        readers.append(reader)
+    return readers
+
+
+def get_header(readers):
+    header = []
+    for reader in readers:
+        columns = next(reader).keys()
+        for column in columns:
+            if column not in header and column != IBGE_COLUMN:
+                header.append(column)
+    return header
+
+
 def clean_rows(data, skip_aggregation_rows=True, drop_ibge_column=True):
-    AGGREGATION_ROW_START = ("TOTAL da AMOSTRA", "---")
-    IBGE_COLUMN = "Código do IBGE"
     for row in data:
         if skip_aggregation_rows \
            and any(c in list(row.values())[0] for c in AGGREGATION_ROW_START):
@@ -103,12 +122,10 @@ def clean_rows(data, skip_aggregation_rows=True, drop_ibge_column=True):
         yield row
 
 
-def write(data, filepath):
+def write(data, filepath, header):
     if not filepath.parent.exists():
         filepath.parent.mkdir(parents=True)
     data = clean_rows(data)
-    first_row = next(data)
-    header = first_row.keys()
     with open(filepath, "w", encoding="utf-8", newline="\n") as f:
         writer = csv.DictWriter(
             f,
@@ -117,7 +134,6 @@ def write(data, filepath):
             quoting=csv.QUOTE_ALL,
         )
         writer.writeheader()
-        writer.writerow(first_row)
         writer.writerows(data)
 
 
@@ -137,14 +153,11 @@ def main():
                 columns_renamer = rename_columns_aguas_pluviais
             else:
                 columns_renamer = rename_columns
-            data = chain(
-                *(
-                    read_lines(f, columns_renamer)
-                    for f in dirpath.glob("*.csv")
-                )
-            )
+            readers = read_directory(dirpath, columns_renamer)
+            header = get_header(readers)
+            data = chain(*readers)
             destfilepath = releasedir / group / f"{subgroup}.csv"
-            write(data, destfilepath)
+            write(data, destfilepath, header)
 
 
 if __name__ == "__main__":
