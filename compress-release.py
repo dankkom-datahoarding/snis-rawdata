@@ -4,7 +4,7 @@ from pathlib import Path
 
 
 def main():
-    with open("metadata.json") as f:
+    with open("metadata.json", encoding="utf-8") as f:
         metadata = json.load(f)
     releasedir = Path("release")
     for dataset_name in metadata["datasets"]:
@@ -14,12 +14,13 @@ def main():
             )
             filename = f"{dataset_name}-{datasubset_name}.zip"
             cmd = [
-                "zip",
-                "-9jpr",
+                "7z",
+                "a",
                 filename,
-                str(datasubset_filepath),
+                str(datasubset_filepath.absolute()),
+                "-mx=9",
             ]
-            print(cmd)
+            print("Command:", " ".join(cmd))
             subprocess.run(cmd)
 
 
