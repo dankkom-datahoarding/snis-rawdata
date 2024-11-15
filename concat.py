@@ -95,7 +95,7 @@ def write(data, filepath, header):
 
 def main():
 
-    rawdir = Path(".")
+    rawdir = Path(".", "data")
     releasedir = Path("release")
 
     for group in METADATA["datasets"]:
